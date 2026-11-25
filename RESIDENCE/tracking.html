@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Requests | RESIDENCE</title>
+    <link rel="stylesheet" href="style.css?v=resident-back-button">
+</head>
+<body>
+
+<main class="tracking-container">
+
+    <header class="page-header">
+        <a href="home.html" class="back-link" aria-label="Back to home">‹</a>
+        <div>
+            <h2>Track Requests</h2>
+            <p>Monitor and organize your document requests</p>
+        </div>
+    </header>
+
+    <section class="tracking-summary">
+        <p>YOUR REQUESTS</p>
+        <h1 id="totalRequests">0</h1>
+        <small>Total document requests</small>
+    </section>
+
+    <section class="tracking-section">
+
+        <h3>Request History</h3>
+        <p class="section-description">
+            Search, filter, and sort your document requests.
+        </p>
+
+        <div class="history-controls">
+
+            <div class="history-search">
+                <label for="requestSearch">Search requests</label>
+                <input
+                    type="search"
+                    id="requestSearch"
+                    placeholder="Search reference number or document..."
+                >
+            </div>
+
+            <div class="history-filter">
+                <label for="statusFilter">Filter by status</label>
+                <select id="statusFilter">
+                    <option value="all">All Statuses</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Processing">Processing</option>
+                    <option value="Approved">Approved</option>
+                    <option value="Rejected">Rejected</option>
+                    <option value="Completed">Completed</option>
+                </select>
+            </div>
+
+            <div class="history-filter">
+                <label for="dateFilter">Sort by date</label>
+                <select id="dateFilter">
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="table-information">
+            <span id="requestCount">Showing 0 requests</span>
+            <button type="button" id="resetFilters" class="reset-filter">
+                Reset Filters
+            </button>
+        </div>
+
+        <div class="request-table-wrapper">
+            <table class="request-history-table">
+
+                <thead>
+                    <tr>
+                        <th>
+                            <button type="button" class="sort-button" data-sort="reference">
+                                Reference No. ↕
+                            </button>
+                        </th>
+                        <th>
+                            <button type="button" class="sort-button" data-sort="document">
+                                Document Type ↕
+                            </button>
+                        </th>
+                        <th>
+                            <button type="button" class="sort-button" data-sort="date">
+                                Date Submitted ↕
+                            </button>
+                        </th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+            <tbody id="requestTableBody">
+</tbody>
+
+            </table>
+
+            <p id="noRequestsMessage" class="no-requests-message" hidden>
+                No requests found. Try changing your search or filters.
+            </p>
+        </div>
+
+    </section>
+
+    <section class="tracking-help">
+        <h3>Need Help?</h3>
+        <p>
+            Visit the barangay office if you have questions
+            about your document request.
+        </p>
+    </section>
+
+</main>
+
+<nav class="bottom-navigation">
+    <a href="home.html" class="nav-item">
+        🏠
+        <small>Home</small>
+    </a>
+    <a href="request.html" class="nav-item">
+        📄
+        <small>Request</small>
+    </a>
+    <a href="tracking.html" class="nav-item active">
+        📋
+        <small>Tracking</small>
+    </a>
+    <a href="profile.html" class="nav-item">
+        👤
+        <small>Profile</small>
+    </a>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>

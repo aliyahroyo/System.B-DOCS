@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the design responsive on Android -->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>B-DOCS - Login</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <!-- Logo and App Name -->
+        <div class="logo-section">
+            <div class="logo">
+                B
+            </div>
+
+            <h1>B-DOCS</h1>
+
+            <p>Barangay Document Request System</p>
+        </div>
+
+       <!-- Login Form -->
+<div class="login-form">
+
+    <a href="admin-login.html" class="login-switch-link">
+        Staff Login <span aria-hidden="true">→</span>
+    </a>
+
+    <h2>Welcome Back!</h2>
+
+    <p class="subtitle">
+        Login to access your account.
+    </p>
+
+    <form id="loginForm" autocomplete="on">
+
+        <!-- Email -->
+        <div class="input-group">
+            <label for="email">Email Address</label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                autocomplete="username"
+                required>
+        </div>
+
+        <!-- Password -->
+        <div class="input-group">
+            <label for="password">Password</label>
+
+            <div class="password-container">
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    autocomplete="current-password"
+                    required>
+
+                <button type="button" id="togglePassword">
+                    Show
+                </button>
+            </div>
+
+            <small id="loginError" style="color: red;"></small>
+        </div>
+
+        <!-- Login Button -->
+        <button type="submit" class="login-button">
+            LOGIN
+        </button>
+
+    </form>
+
+    <!-- Signup Link -->
+    <div class="signup-section">
+        <p>
+            Don't have an account?
+            <a href="signup.html">Sign Up</a>
+        </p>
+    </div>
+
+</div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>B-DOCS © 2026</p>
+            <p>Making Barangay Services Easier</p>
+        </div>
+
+    </div>
+
+    <!-- Connect JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

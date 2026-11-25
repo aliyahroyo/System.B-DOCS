@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Admin Account</title>
+</head>
+<body>
+
+    <h2>Create First Admin Account</h2>
+
+    <form id="adminRegisterForm">
+        <input type="text" id="fullName" placeholder="Full Name" required>
+        <br><br>
+
+        <input type="email" id="email" placeholder="Admin Email" required>
+        <br><br>
+
+        <input type="password" id="password" placeholder="Password" required>
+        <br><br>
+
+        <button type="submit">Create Admin Account</button>
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        document.getElementById("adminRegisterForm")
+            .addEventListener("submit", async function(event) {
+                event.preventDefault();
+
+                const formData = new FormData();
+
+                formData.append("full_name",
+                    document.getElementById("fullName").value);
+
+                formData.append("email",
+                    document.getElementById("email").value);
+
+                formData.append("password",
+                    document.getElementById("password").value);
+
+                try {
+                    const response = await fetch("admin_register.php", {
+                        method: "POST",
+                        body: formData
+                    });
+
+                    const result = await response.json();
+
+                    document.getElementById("message").textContent =
+                        result.message;
+
+                    if (result.success) {
+                        document.getElementById("adminRegisterForm").reset();
+                    }
+
+                } catch (error) {
+                    document.getElementById("message").textContent =
+                        "Unable to connect to the server.";
+                }
+            });
+    </script>
+
+</body>
+</html>

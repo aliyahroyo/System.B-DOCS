@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Requests | B-DOCS</title>
+    <link rel="stylesheet" href="style.css?v=admin-button-design-3">
+</head>
+<body>
+
+<main class="admin-container">
+
+    <header class="admin-header">
+        <div class="admin-brand">
+            <div class="admin-logo">B</div>
+            <div>
+                <h2>B-DOCS</h2>
+                <p>Request Management</p>
+            </div>
+        </div>
+
+        <a href="admin.php"
+           class="admin-back-link admin-dashboard-back-button">
+            Dashboard
+        </a>
+    </header>
+
+    <section class="admin-welcome">
+        <p>ADMINISTRATION</p>
+        <h1>Manage Requests</h1>
+        <span>Review and update resident document requests.</span>
+    </section>
+
+    <section class="manage-requests">
+        <h2>Resident Requests</h2>
+
+        <div id="adminRequestList">
+            <p>Loading requests...</p>
+        </div>
+
+        <p id="noAdminRequests" hidden>
+            No resident requests found.
+        </p>
+
+        <div id="adminRequestPagination"
+             class="admin-request-pagination"
+             hidden>
+            <button type="button" id="previousAdminRequestPage">
+                Previous
+            </button>
+            <span id="adminRequestPageInfo">Page 1 of 1</span>
+            <button type="button" id="nextAdminRequestPage">
+                Next
+            </button>
+        </div>
+    </section>
+
+    <footer class="admin-footer">
+        B-DOCS Admin Portal • Version 1.0
+    </footer>
+
+</main>
+
+<div id="attachmentPreviewModal" class="attachment-modal" hidden>
+    <div class="attachment-modal-content">
+        <div class="attachment-modal-header">
+            <h3 id="attachmentPreviewTitle">Attachment Preview</h3>
+            <button type="button"
+                    id="closeAttachmentPreview"
+                    class="attachment-close-btn"
+                    aria-label="Close preview">
+                &times;
+            </button>
+        </div>
+
+        <div id="attachmentPreviewBody" class="attachment-preview-body"></div>
+
+        <div class="attachment-modal-footer">
+            <a id="downloadAttachment"
+               href="#"
+               download
+               class="attachment-download-btn">
+                Download Attachment
+            </a>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

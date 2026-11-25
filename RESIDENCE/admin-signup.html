@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Registration | RESIDENCE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="admin-login-container">
+
+        <div class="admin-login-logo">R</div>
+
+        <h1>RESIDENCE</h1>
+        <p class="admin-login-subtitle">BARANGAY ADMIN PORTAL</p>
+
+        <section class="admin-login-card">
+            <h2>Staff Registration</h2>
+            <p>Submit your information for staff account approval.</p>
+
+            <form id="adminSignupForm">
+
+                
+<div class="staff-name-row">
+
+    <div class="staff-name-field">
+        <label for="staffFirstName">First Name</label>
+        <input type="text" id="staffFirstName"
+               placeholder="First name" required>
+    </div>
+
+    <div class="staff-name-field">
+        <label for="staffMiddleName">Middle Name</label>
+        <input type="text" id="staffMiddleName"
+               placeholder="Middle name">
+    </div>
+
+    <div class="staff-name-field">
+        <label for="staffLastName">Last Name</label>
+        <input type="text" id="staffLastName"
+               placeholder="Last name" required>
+    </div>
+
+</div>
+
+
+                <label for="staffPosition">Position</label>
+                <select id="staffPosition" required>
+                    <option value="">Select your position</option>
+                    <option value="Barangay Secretary">Barangay Secretary</option>
+                    <option value="Barangay Clerk">Barangay Clerk</option>
+                    <option value="Barangay Staff">Barangay Staff</option>
+                    <option value="Barangay Official">Barangay Official</option>
+                </select>
+
+                <label for="staffEmail">Email Address</label>
+                <input type="email" id="staffEmail"
+                       placeholder="Enter your email address" required>
+
+                <label for="staffPhone">Phone Number</label>
+                <input type="tel" id="staffPhone"
+                       placeholder="09XXXXXXXXX"
+                       pattern="09[0-9]{9}"
+                       maxlength="11" required>
+
+                
+<label for="staffPassword">Password</label>
+<input
+    type="password"
+    id="staffPassword"
+    placeholder="Minimum 8 characters"
+    minlength="8"
+    autocomplete="new-password"
+    required
+>
+
+<label for="staffConfirmPassword">Confirm Password</label>
+<input
+    type="password"
+    id="staffConfirmPassword"
+    placeholder="Confirm your password"
+    autocomplete="new-password"
+    required
+>
+
+                <label class="staff-approval-check">
+                    <input type="checkbox" id="staffAgreement" required>
+                    <span>I confirm that the information provided is correct.</span>
+                </label>
+
+                <button type="submit" class="admin-login-button">
+                    SUBMIT REGISTRATION
+                </button>
+
+            </form>
+        </section>
+
+        <a href="admin-login.html" class="resident-login-link">
+            Already registered? Staff Login
+        </a>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

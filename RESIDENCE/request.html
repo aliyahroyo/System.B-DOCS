@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request a Document | RESIDENCE</title>
+    <link rel="stylesheet" href="style.css?v=resident-back-button-arrow">
+</head>
+<body>
+
+    <main class="request-container">
+
+        <header class="page-header">
+            <a href="home.html" class="back-link" aria-label="Back to home">‹</a>
+            <div>
+                <h2>Request a Document</h2>
+                <p>Fill in the details below</p>
+            </div>
+        </header>
+
+        <form id="documentRequestForm">
+
+            <!-- DOCUMENT SELECTION -->
+            <section class="request-section">
+                <h3>Select Document</h3>
+                <p class="section-description">
+                    Choose the document you want to request.
+                </p>
+
+                <label class="field-label" for="documentType">
+                    Document Type
+                </label>
+
+                <select id="documentType" required>
+                    <option value="">Choose a document</option>
+                    <option value="Barangay Indigency">Barangay Indigency</option>
+                    <option value="Barangay Clearance">Barangay Clearance</option>
+                    <option value="Certificate of Residency">Certificate of Residency</option>
+                    <option value="Business Clearance">Business Clearance</option>
+                    <option value="Community Tax Certificate (CTC/Cedula)">
+                        Community Tax Certificate (CTC/Cedula)
+                    </option>
+                </select>
+            </section>
+
+            <!-- PURPOSE -->
+            <section class="request-section">
+                <h3>Purpose of Request</h3>
+                <p class="section-description">
+                    Tell us why you need this document.
+                </p>
+
+                <label class="field-label" for="requestPurpose">
+                    Purpose
+                </label>
+
+                <textarea
+                    id="requestPurpose"
+                    rows="4"
+                    placeholder="Example: For employment requirements..."
+                    required
+                ></textarea>
+            </section>
+
+            <!-- REQUIRED ATTACHMENTS -->
+            <section class="request-section" id="requiredAttachmentSection" hidden>
+
+                <h3>Required Attachment</h3>
+
+                <p class="section-description" id="attachmentInstruction"></p>
+
+                <label class="field-label" for="attachments">
+                    Upload Required Document
+                </label>
+
+                <input
+                    type="file"
+                    id="attachments"
+                    accept=".jpg,.jpeg,.png,.pdf,.doc,.docx"
+                    multiple
+                >
+
+                <small>
+                    <p>Accepted formats: JPG, JPEG, PNG, PDF, DOC, DOCX</p>
+                    <p>Maximum file size: 5 MB per file</p>
+                </small>
+
+                <div id="attachmentList"></div>
+
+                <p id="attachmentError" style="color: red;"></p>
+
+            </section>
+
+            <!-- SUBMIT -->
+            <button type="submit" class="submit-request-button">
+                SUBMIT REQUEST
+            </button>
+
+            <p class="request-note">
+                Please review your information before submitting.
+            </p>
+
+        </form>
+
+    </main>
+
+    <!-- BOTTOM NAVIGATION -->
+    <nav class="bottom-navigation">
+
+        <a href="home.html" class="nav-item">
+            🏠
+            <small>Home</small>
+        </a>
+
+        <a href="request.html" class="nav-item active">
+            📄
+            <small>Request</small>
+        </a>
+
+        <a href="tracking.html" class="nav-item">
+            📋
+            <small>Tracking</small>
+        </a>
+
+        <a href="profile.html" class="nav-item">
+            👤
+            <small>Profile</small>
+        </a>
+
+    </nav>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

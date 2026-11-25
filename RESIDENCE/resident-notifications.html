@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESIDENCE | My Notifications</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="app-container">
+
+    <header class="app-header">
+        <div class="brand">
+            <h2>RESIDENCE</h2>
+            <p>Barangay Document Services</p>
+        </div>
+    </header>
+
+    <section class="resident-notification-heading">
+        <a href="home.html">← Back to Home</a>
+        <h1>My Notifications</h1>
+        <p>Stay updated on your document requests.</p>
+    </section>
+
+    <section class="resident-notification-card">
+
+        <div class="resident-notification-top">
+            <h2>Recent Updates</h2>
+
+            <button type="button" onclick="markResidentNotificationsRead()">
+                Mark All as Read
+            </button>
+        </div>
+
+        <!-- Notifications will be displayed here automatically -->
+       
+<div id="residentNotificationsList">
+
+    <p id="emptyResidentNotifications">
+        You don't have any notifications yet.
+    </p>
+
+</div>
+
+<!-- NOTIFICATION PAGINATION -->
+<div id="residentNotificationPagination" class="resident-notification-pagination" hidden>
+
+    <button type="button" id="previousNotificationPage">
+        Previous
+    </button>
+
+    <span id="notificationPageInfo">Page 1 of 1</span>
+
+    <button type="button" id="nextNotificationPage">
+        Next
+    </button>
+
+</div>
+
+    </section>
+
+    <footer class="app-footer">
+        RESIDENCE • Barangay Document Services
+    </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
+```

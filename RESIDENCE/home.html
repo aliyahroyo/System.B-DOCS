@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>B-DOCS - Home</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="home-container">
+
+    <!-- HEADER -->
+    <header class="home-header">
+
+        <div class="brand">
+            <div class="small-logo">B</div>
+
+            <div>
+                <h2>B-DOCS</h2>
+                <p>Barangay Services</p>
+            </div>
+        </div>
+
+        <button class="notification-btn"
+                onclick="window.location.href='resident-notifications.html'"
+                aria-label="View notifications">
+            🔔
+            <span id="residentNotificationBadge"
+                  class="admin-notification-badge"
+                  hidden>0</span>
+        </button>
+
+    </header>
+
+    <!-- WELCOME SECTION -->
+    <section class="welcome-card">
+
+        <p>WELCOME BACK!</p>
+
+        
+        <h1 id="residentName">Loading...</h1>
+        <p>
+            Your barangay services, made easier.
+        </p>
+
+    </section>
+
+    <!-- QUICK SERVICES -->
+    <section class="home-section">
+
+        <h2>Quick Services</h2>
+
+        <div class="services-grid">
+
+            <div class="service-card"
+                 onclick="goToRequest()">
+
+                <div class="service-icon">📄</div>
+
+                <h3>Request Document</h3>
+
+                <p>Apply for barangay certificates.</p>
+
+            </div>
+
+            <div class="service-card"
+                 onclick="goToTracking()">
+
+                <div class="service-icon">📍</div>
+
+                <h3>Track Request</h3>
+
+                <p>Check your document progress.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- RECENT REQUESTS -->
+<section class="home-section">
+
+    <div class="section-heading">
+
+        <h2>My Recent Requests</h2>
+
+        <a href="tracking.html">See All</a>
+
+    </div>
+
+    <div id="recentRequestsContainer">
+
+        <p>Loading your recent requests...</p>
+
+    </div>
+
+</section>
+
+    <!-- INFORMATION CARD -->
+    <section class="information-card">
+
+        <h3>Need assistance?</h3>
+
+        <p>
+            Visit your barangay office for more information
+            about document requirements.
+        </p>
+       
+
+    </section>
+
+    <!-- BOTTOM NAVIGATION -->
+    <nav class="bottom-navigation">
+
+        <a href="home.html" class="nav-item active">
+            <span>⌂</span>
+            <small>Home</small>
+        </a>
+
+        <a href="request.html" class="nav-item">
+            <span>▤</span>
+            <small>Requests</small>
+        </a>
+
+        <a href="tracking.html" class="nav-item">
+            <span>◉</span>
+            <small>Tracking</small>
+        </a>
+
+        <a href="profile.html" class="nav-item">
+            <span>♙</span>
+            <small>Profile</small>
+        </a>
+
+    </nav>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

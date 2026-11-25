@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | RESIDENCE</title>
+    <link rel="stylesheet" href="style.css?v=resident-back-button">
+</head>
+<body>
+
+    <main class="profile-container">
+
+        <header class="page-header">
+            <a href="home.html" class="back-link" aria-label="Back to home">‹</a>
+            <div>
+                <h2>My Profile</h2>
+                <p>Manage your personal information</p>
+            </div>
+        </header>
+
+        <section class="profile-card">
+            <div class="profile-avatar">JD</div>
+            <h2 id="profileName">Juan Dela Cruz</h2>
+            <p>Resident</p>
+        </section>
+
+        <section class="profile-details">
+            <h3>Personal Information</h3>
+
+            <div class="profile-field">
+                <label>Full Name</label>
+                <p id="displayName">Juan Dela Cruz</p>
+            </div>
+
+            <div class="profile-field">
+                <label>Email Address</label>
+                <p id="displayEmail">juan@email.com</p>
+            </div>
+
+            <div class="profile-field">
+                <label>Phone Number</label>
+                <p id="displayPhone">09123456789</p>
+            </div>
+
+            <button type="button" class="edit-profile-button" onclick="toggleEditProfile()">
+                EDIT PROFILE
+            </button>
+        </section>
+
+        <section class="edit-profile-section" id="editProfileSection" hidden>
+            <h3>Edit Information</h3>
+
+            <form id="profileForm">
+                <label for="editName">Full Name</label>
+                <input type="text" id="editName" required>
+
+                <label for="editEmail">Email Address</label>
+                <input type="email" id="editEmail" required>
+
+                <label for="editPhone">Phone Number</label>
+                <input type="tel" id="editPhone"
+                       pattern="09[0-9]{9}"
+                       maxlength="11"
+                       required>
+
+                <button type="submit" class="edit-profile-button">
+                    SAVE CHANGES
+                </button>
+            </form>
+        </section>
+
+        <button type="button" class="logout-button" onclick="logoutResident()">
+            LOG OUT
+        </button>
+
+        <p class="profile-version">RESIDENCE App • Version 1.0</p>
+
+    </main>
+
+    <nav class="bottom-navigation">
+        <a href="home.html" class="nav-item">
+            🏠
+            <small>Home</small>
+        </a>
+        <a href="request.html" class="nav-item">
+            📄
+            <small>Request</small>
+        </a>
+        <a href="tracking.html" class="nav-item">
+            📋
+            <small>Tracking</small>
+        </a>
+        <a href="profile.html" class="nav-item active">
+            👤
+            <small>Profile</small>
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
